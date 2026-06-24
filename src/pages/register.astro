@@ -1,14 +1,8 @@
 ---
-import AuthLayout from '@/layouts/AuthLayout.astro';
-import { RegisterForm } from '@/components/forms/RegisterForm';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { AuthScreen } from '@/components/forms/AuthScreen';
 ---
 
-<AuthLayout title="Daftar - BAHARI">
-  <div className="mb-8 text-center space-y-2">
-    <h1 class="text-3xl font-bold font-['Outfit'] tracking-tight">Daftar ke BAHARI</h1>
-    <p class="text-muted-foreground">Mulai langkah baru bersama ekonomi pesisir</p>
-  </div>
-  
-  <!-- Render the React Island here -->
-  <RegisterForm client:load />
-</AuthLayout>
+<BaseLayout title="Daftar - BAHARI">
+  <AuthScreen mode="register" client:load />
+</BaseLayout>

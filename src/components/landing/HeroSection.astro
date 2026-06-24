@@ -2,147 +2,107 @@
 import { Button } from "@/components/ui/Button";
 ---
 
-<section class="relative w-full min-h-[95vh] flex items-center pt-24 pb-16 overflow-hidden bg-white">
+<section class="relative w-full h-[100dvh] min-h-[600px] flex items-center pt-24 pb-16 overflow-hidden bg-white z-0">
+  {/* Transition gradient to next section (bg-slate-50) */}
+  <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-slate-50 to-transparent z-20 pointer-events-none"></div>
+
   {/* Background Image Container */}
-  <div class="absolute inset-y-0 right-0 w-full lg:w-[65%] z-0">
+  <div id="hero-bg" class="absolute inset-y-0 right-0 w-full lg:w-[65%] z-0 will-change-transform">
     <div class="absolute inset-0 bg-gradient-to-r from-white via-white/50 to-transparent lg:via-transparent z-10"></div>
     <div class="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-white to-transparent z-10"></div>
+    <div class="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-slate-50 via-slate-50/50 to-transparent z-10"></div>
     <img src="/hero-bg.png" alt="Nelayan" class="w-full h-full object-cover object-[center_30%]" />
   </div>
 
-  <div class="container relative z-20 mx-auto px-4 md:px-6">
+  <div id="hero-text" class="container relative z-20 mx-auto px-4 md:px-6 will-change-transform">
     <div class="grid gap-8 lg:grid-cols-2 items-center">
       
       {/* Left Column: Text & CTA */}
-      <div class="flex flex-col justify-center space-y-6 lg:space-y-8 max-w-[650px]">
-        <div class="space-y-4 lg:space-y-5">
-          <p class="text-[#0a4595] font-bold tracking-wide text-lg lg:text-xl">
+      <div class="flex flex-col justify-center space-y-6 lg:space-y-7 max-w-[580px]">
+        <div class="space-y-3 lg:space-y-4">
+          <p class="text-[#0a4595] font-bold tracking-wide text-[13px] lg:text-sm uppercase">
             Platform Digital Koperasi Desa
           </p>
-          <h1 class="text-4xl md:text-5xl lg:text-[52px] font-bold font-['Outfit'] text-[#0f3e68] leading-[1.15] tracking-tight">
-            Menghubungkan Nelayan, Pasar, dan Insentif Lingkungan dalam Satu Ekosistem
+          <h1 class="text-4xl lg:text-[46px] font-bold font-['Outfit'] text-[#0f3e68] leading-[1.15] tracking-tight">
+            Ekosistem Digital untuk Nelayan & Laut Lestari
           </h1>
-          <p class="text-slate-600 text-base lg:text-lg leading-relaxed font-medium pt-1 max-w-[600px]">
-            BAHARI memberdayakan masyarakat pesisir melalui koperasi desa untuk meningkatkan kesejahteraan, menjaga laut, dan membangun ekonomi yang berkelanjutan.
+          <p class="text-slate-600 text-[15px] lg:text-[16px] leading-relaxed font-medium pt-1 max-w-[520px]">
+            BAHARI memberdayakan masyarakat pesisir melalui koperasi desa untuk meningkatkan kesejahteraan dan membangun ekonomi biru yang berkelanjutan.
           </p>
         </div>
         
-        <div class="flex flex-col sm:flex-row gap-4 pt-2">
+        <div class="flex flex-col sm:flex-row gap-3 pt-2">
           <a href="/marketplace">
-            <Button size="lg" className="w-full sm:w-auto bg-[#083575] hover:bg-[#0a4595] text-white rounded-xl px-8 py-7 text-base font-semibold gap-3 shadow-lg shadow-blue-900/20">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            <Button className="w-full sm:w-auto bg-[#083575] hover:bg-[#0a4595] text-white rounded-xl px-6 h-[52px] text-[15px] font-semibold gap-2.5 shadow-lg shadow-blue-900/20">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
               Jelajahi Marketplace
             </Button>
           </a>
           <a href="/register">
-            <Button variant="outline" size="lg" className="w-full sm:w-auto border-2 border-[#083575] text-[#083575] hover:bg-blue-50 rounded-xl px-8 py-7 text-base font-semibold gap-3 bg-white/60 backdrop-blur-sm">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              Untuk Koperasi Desa
+            <Button variant="outline" className="w-full sm:w-auto border-2 border-[#083575] text-[#083575] hover:bg-blue-50 rounded-xl px-6 h-[52px] text-[15px] font-semibold gap-2.5 bg-white/60 backdrop-blur-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              Gabung Koperasi
             </Button>
           </a>
         </div>
 
         {/* Stats Row */}
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6 pt-10 mt-2">
+        <div class="grid grid-cols-3 gap-4 pt-6 mt-1 border-t border-slate-100">
           <div class="flex flex-col">
-            <div class="flex items-center gap-2 text-[#083575] font-bold text-xl lg:text-2xl font-['Outfit'] tracking-tight">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <div class="flex items-center gap-1.5 text-[#083575] font-bold text-lg lg:text-xl font-['Outfit'] tracking-tight">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
               79.205+
             </div>
-            <p class="text-[11px] text-slate-500 mt-1.5 font-semibold tracking-wide">Nelayan Terdaftar</p>
+            <p class="text-[11px] text-slate-500 mt-1 font-bold tracking-wide">Nelayan Terdaftar</p>
           </div>
-          <div class="flex flex-col border-l border-slate-200 pl-4 lg:pl-6">
-            <div class="flex items-center gap-2 text-emerald-600 font-bold text-xl lg:text-2xl font-['Outfit'] tracking-tight">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M9 8h1"/><path d="M9 12h1"/><path d="M9 16h1"/><path d="M14 8h1"/><path d="M14 12h1"/><path d="M14 16h1"/><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/></svg>
+          <div class="flex flex-col border-l border-slate-200 pl-4">
+            <div class="flex items-center gap-1.5 text-emerald-600 font-bold text-lg lg:text-xl font-['Outfit'] tracking-tight">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M9 8h1"/><path d="M9 12h1"/><path d="M9 16h1"/><path d="M14 8h1"/><path d="M14 12h1"/><path d="M14 16h1"/><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/></svg>
               1.245+
             </div>
-            <p class="text-[11px] text-slate-500 mt-1.5 font-semibold tracking-wide">Koperasi Aktif</p>
+            <p class="text-[11px] text-slate-500 mt-1 font-bold tracking-wide">Koperasi Aktif</p>
           </div>
-          <div class="flex flex-col border-l border-slate-200 pl-4 lg:pl-6">
-            <div class="flex items-center gap-2 text-emerald-600 font-bold text-xl lg:text-2xl font-['Outfit'] tracking-tight">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
-              272.456 Ton
+          <div class="flex flex-col border-l border-slate-200 pl-4">
+            <div class="flex items-center gap-1.5 text-emerald-600 font-bold text-lg lg:text-xl font-['Outfit'] tracking-tight">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+              272k Ton
             </div>
-            <p class="text-[11px] text-slate-500 mt-1.5 font-semibold tracking-wide">Produksi Per Tahun</p>
-          </div>
-          <div class="flex flex-col border-l border-slate-200 pl-4 lg:pl-6">
-            <div class="flex items-center gap-2 text-emerald-600 font-bold text-xl lg:text-2xl font-['Outfit'] tracking-tight">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-              8.750+
-            </div>
-            <p class="text-[11px] text-slate-500 mt-1.5 font-semibold tracking-wide">Eco Point Terkumpul</p>
+            <p class="text-[11px] text-slate-500 mt-1 font-bold tracking-wide">Produksi / Tahun</p>
           </div>
         </div>
       </div>
       
-      {/* Right Column: Floating Card */}
-      <div class="relative mt-12 lg:mt-0 flex justify-end items-end h-full w-full">
-        <div class="bg-white/95 backdrop-blur-2xl p-6 rounded-[24px] shadow-2xl shadow-[#0f3e68]/15 border border-white/80 w-full max-w-[360px] translate-y-8 lg:translate-y-16 mr-0 lg:mr-8">
-          <div class="flex justify-between items-center mb-6">
-            <h3 class="font-bold text-[#0f3e68] text-lg font-['Outfit']">Harga Ikan Hari Ini</h3>
-            <a href="/marketplace" class="text-xs font-semibold text-[#0a4595] hover:underline">Lihat Semua</a>
-          </div>
-          
-          <div class="space-y-5">
-            {/* Item 1 */}
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-full bg-slate-100 overflow-hidden shrink-0 border border-slate-200/50">
-                  <img src="https://images.unsplash.com/photo-1511556820780-d912e42b4980?w=100&h=100&fit=crop" alt="Ikan Tuna" class="w-full h-full object-cover" />
-                </div>
-                <div>
-                  <p class="text-sm font-bold text-[#0f3e68]">Ikan Tuna</p>
-                  <p class="text-xs font-semibold text-slate-500 mt-0.5">Rp 32.000 /kg</p>
-                </div>
-              </div>
-              <span class="text-xs font-bold text-emerald-600">+12%</span>
-            </div>
-            
-            {/* Item 2 */}
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-full bg-slate-100 overflow-hidden shrink-0 border border-slate-200/50">
-                  <img src="https://images.unsplash.com/photo-1628144212767-422849e7b282?w=100&h=100&fit=crop" alt="Cumi-Cumi" class="w-full h-full object-cover" />
-                </div>
-                <div>
-                  <p class="text-sm font-bold text-[#0f3e68]">Cumi-Cumi</p>
-                  <p class="text-xs font-semibold text-slate-500 mt-0.5">Rp 28.000 /kg</p>
-                </div>
-              </div>
-              <span class="text-xs font-bold text-emerald-600">+8%</span>
-            </div>
-            
-            {/* Item 3 */}
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-full bg-slate-100 overflow-hidden shrink-0 border border-slate-200/50">
-                  <img src="https://images.unsplash.com/photo-1534043464124-3be32fe000cb?w=100&h=100&fit=crop" alt="Kerapu" class="w-full h-full object-cover" />
-                </div>
-                <div>
-                  <p class="text-sm font-bold text-[#0f3e68]">Kerapu</p>
-                  <p class="text-xs font-semibold text-slate-500 mt-0.5">Rp 45.000 /kg</p>
-                </div>
-              </div>
-              <span class="text-xs font-bold text-emerald-600">+15%</span>
-            </div>
-            
-            {/* Item 4 */}
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-full bg-slate-100 overflow-hidden shrink-0 border border-slate-200/50">
-                  <img src="https://images.unsplash.com/photo-1615833441991-5813e31c81ac?w=100&h=100&fit=crop" alt="Rumput Laut" class="w-full h-full object-cover" />
-                </div>
-                <div>
-                  <p class="text-sm font-bold text-[#0f3e68]">Rumput Laut</p>
-                  <p class="text-xs font-semibold text-slate-500 mt-0.5">Rp 8.500 /kg</p>
-                </div>
-              </div>
-              <span class="text-xs font-bold text-emerald-600">+10%</span>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* Right Column: Empty to let the background image shine */}
+      <div class="hidden lg:block"></div>
       
     </div>
   </div>
 </section>
+
+<script>
+  // Simple, high-performance vanilla JS parallax effect
+  window.addEventListener('scroll', () => {
+    if (typeof window === 'undefined') return;
+    
+    // Use requestAnimationFrame for smooth 60fps performance
+    window.requestAnimationFrame(() => {
+      const scrollY = window.scrollY;
+      
+      // Only compute parallax if we haven't scrolled past the hero section
+      if (scrollY < window.innerHeight * 1.5) {
+        const heroBg = document.getElementById('hero-bg');
+        const heroText = document.getElementById('hero-text');
+        
+        if (heroBg) {
+          // Background moves slower than the page (depth effect)
+          heroBg.style.transform = `translateY(${scrollY * 0.35}px)`;
+        }
+        if (heroText) {
+          // Text moves slightly and fades out gracefully
+          heroText.style.transform = `translateY(${scrollY * 0.15}px)`;
+          heroText.style.opacity = Math.max(0, 1 - (scrollY / (window.innerHeight * 0.55))).toString();
+        }
+      }
+    });
+  }, { passive: true });
+</script>
