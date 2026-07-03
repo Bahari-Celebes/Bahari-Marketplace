@@ -1,0 +1,11 @@
+---
+import DashboardLayout from '@/layouts/DashboardLayout.astro';
+import { TransactionDataTable } from '@/components/dashboard/TransactionDataTable';
+---
+
+<DashboardLayout title="Data Transaksi - BAHARI Intelligence">
+  <div class="space-y-6">
+    <h2 class="text-3xl font-bold font-['Outfit']">Data Transaksi</h2>
+    <TransactionDataTable client:load />
+  </div>
+</DashboardLayout>

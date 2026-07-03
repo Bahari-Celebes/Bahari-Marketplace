@@ -1,8 +1,8 @@
 ---
-import BaseLayout from '@/layouts/BaseLayout.astro';
-import { AuthScreen } from '@/components/forms/AuthScreen';
+import AuthLayout from '@/layouts/AuthLayout.astro';
+import { LoginForm } from '@/components/forms/LoginForm';
 ---
 
-<BaseLayout title="Masuk - BAHARI">
-  <AuthScreen mode="login" client:load />
-</BaseLayout>
+<AuthLayout title="Login - BAHARI Intelligence">
+  <LoginForm client:load />
+</AuthLayout>

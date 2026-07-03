@@ -1,0 +1,12 @@
+{
+  "name": "BAHARI Intelligence",
+  "short_name": "BAHARI",
+  "description": "Dashboard Keputusan Koperasi Pesisir",
+  "start_url": "/dashboard",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#0a4595",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

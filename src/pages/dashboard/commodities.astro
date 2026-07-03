@@ -1,8 +1,11 @@
 ---
 import DashboardLayout from '@/layouts/DashboardLayout.astro';
-import { CommodityList } from '@/components/dashboard/CommodityList';
+import { CommodityDataTable } from '@/components/dashboard/CommodityDataTable';
 ---
 
-<DashboardLayout title="Komoditas - BAHARI">
-  <CommodityList client:load />
+<DashboardLayout title="Data Komoditas - BAHARI Intelligence">
+  <div class="space-y-6">
+    <h2 class="text-3xl font-bold font-['Outfit']">Data Komoditas</h2>
+    <CommodityDataTable client:load />
+  </div>
 </DashboardLayout>
